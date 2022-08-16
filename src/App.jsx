@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from 'antd';
 
-import { Navbar, Homepage, Exchanges, CryptoCurrencies, CryptoDetails, News } from './components';
+import { Navbar, Homepage, CryptoCurrencies, CryptoDetails, News } from './components';
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
           <div className='routes'>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/exchages" element={<Exchanges />} />
               <Route path="/cryptocurrencies" element={<CryptoCurrencies />} />
               <Route path="/crypto/:uuid" element={<CryptoDetails />} />
               <Route path="/news" element={<News />} />
@@ -25,6 +24,7 @@ function App() {
           </div>
         </Layout>
       </div>
+
       <div className='footer'>
         <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
           Cryptoverse <br />

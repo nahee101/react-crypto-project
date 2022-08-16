@@ -29,7 +29,6 @@ const Navbar = () => {
     const menuItems = [
         { label: <Link to="/">Home</Link>, icon: <HomeOutlined />, key: 'Home' },
         { label: <Link to="/cryptocurrencies">Cryptocurrencies</Link>, icon: <FundOutlined />, key: 'Cryptocurrencies' },
-        { label: <Link to="/exchanges">Exchanges</Link>, icon: <MoneyCollectOutlined />, key: 'Exchanges' },
         { label: <Link to="/news">News</Link>, icon: <BulbOutlined />, key: 'News' },
     ];
 

@@ -21,7 +21,6 @@ export const CryptoDetails = () => {
 
     if (isFetching) return "Loading..."
 
-    const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
     const cryptoDetails = data?.data?.coin;
 
     const stats = [
@@ -44,22 +43,15 @@ export const CryptoDetails = () => {
         <Col className="coin-detail-container">
             <Col className="coin-heading-container">
                 <Title level={2} className="coin-name">
-                    {cryptoDetails.name} ({cryptoDetails.simbol}) Price
+                    {cryptoDetails.name} ({cryptoDetails.symbol}) Price
                 </Title>
                 <p>
                     {cryptoDetails.name} live price in US dollars.
                     View value statistics, market cap and supply.
                 </p>
             </Col>
-            <Select
-                defaultValue="7d"
-                className="select-timeperiod"
-                placeholder="Select Time Period"
-                onChange={(value) => setTimeperiod(value)}>
-                {time.map((date) => <Option key={date}>{date}</Option>)}
-            </Select>
 
-            <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
+            <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails?.price)} coinName={cryptoDetails?.name} />
 
             <Col className="stats-container">
                 <Col className="coin-value-statistics">
