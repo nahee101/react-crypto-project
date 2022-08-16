@@ -6,10 +6,12 @@ import { Navbar, Homepage, Exchanges, CryptoCurrencies, CryptoDetails, News } fr
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+
       <div className='navbar'>
         <Navbar />
       </div>
+
       <div className='main'>
         <Layout>
           <div className='routes'>
