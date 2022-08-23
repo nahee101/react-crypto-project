@@ -32,8 +32,7 @@ function App() {
         </Typography.Title>
         <Space>
           <Link to="/">Home</Link>
-          <Link to="/">Exchanges</Link>
-          <Link to="/">News</Link>
+          <Link to="/news">News</Link>
         </Space>
       </div>
     </div>
